@@ -1,12 +1,12 @@
 const video = document.getElementById("video");
 const dispCs = document.getElementById("disp");
 dispCs.width = 200;
-dispCs.height = 230;
+dispCs.height = 330;
 const dispCtx = dispCs.getContext('2d');
 
 const hiddenCanvas = document.createElement('canvas');
 hiddenCanvas.width = 200;
-hiddenCanvas.height = 230;
+hiddenCanvas.height = 330;
 const hiddenCtx = hiddenCanvas.getContext('2d');
 
 function start() {
