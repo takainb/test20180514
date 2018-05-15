@@ -1,7 +1,7 @@
 const video = document.getElementById("video");
 const dispCs = document.getElementById("disp");
-dispCs.width = 512;
-dispCs.height = 512;
+dispCs.width = 256;
+dispCs.height = 256;
 const dispCtx = dispCs.getContext('2d');
 
 const hiddenCanvas = document.createElement('canvas');
