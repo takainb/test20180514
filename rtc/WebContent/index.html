@@ -3,16 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <title>Canvas</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
-  <link rel="stylesheet" href="index.css" />
-  <script type="text/javascript" src="key.js"></script>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0" />
 </head>
 <body>
-  <canvas id="canvas"></canvas>
-  <div id="videobox">
-    <video id="video" autoplay="true" playsinline="true"></video>
-  </div>
+  <video id="video" width="256" height="256" autoplay playsinline></video>
+  <canvas id="disp"></canvas>
+  <p>Camera<br>
+    <input type="radio" name="camtype" value="back" checked>背面
+    <input type="radio" name="camtype" value="default">デフォルト
+  </p>
+  <button onClick="start()">start</button>
+  <button onClick="stop()">stop</button>
+
+  <script src="ccv.js"></script>
+  <script src="face.js"></script>
   <script src="main.js"></script>
+
 </body>
 </html>
