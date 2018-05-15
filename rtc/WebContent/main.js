@@ -5,7 +5,7 @@ var medias = { audio:false, video:{}};
 if(!!navigator.mediaDevices&&!!navigator.mediaDevices.getUserMedia) {
 	// 対応環境
 	// リアカメラを指定
-	medias.video.facingMode = {exact:"enviroment"};
+	//medias.video.facingMode = {exact:"enviroment"};
 	// getUserMediaを用いて、webカメラの映像を取得
 	navigator.mediaDevices.getUserMedia(medias).then(
 			function(stream) {
