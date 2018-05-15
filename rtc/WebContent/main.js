@@ -1,19 +1,28 @@
-// カメラのキャプチャー
-function capCamera(){
-  navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || window.navigator.mozGetUserMedia;
-    window.URL = window.URL || window.webkitURL;
- 
-  var video = document.getElementById("camera");
-  var localStream = null;
-  navigator.getUserMedia({video: true, audio: false},
-  // カメラのキャプチャーに成功した場合
-  function(stream) {
-    console.log(stream);
-    video.src = window.URL.createObjectURL(stream);
-  },
-  // カメラのキャプチャーに失敗した場合
-  function(err) {
-    console.log(err);
-  }
-  );
+const medias = {audio : false, video : {
+        facingMode : {
+          exact : "environment"
+        }
+      }},
+      video  = document.getElementById("video"),
+      canvas = document.getElementById("canvas"),
+      ctx    = canvas.getContext("2d");
+
+navigator.getUserMedia(medias, successCallback, errorCallback);
+
+requestAnimationFrame(draw);
+
+function successCallback(stream) {
+  video.srcObject = stream;
+};
+
+function errorCallback(err) {
+  alert(err);
+};
+
+function draw() {
+  canvas.width  = window.innerWidth;
+  canvas.height = window.innerHeight;
+  ctx.drawImage(video, 0, 0);
+
+  requestAnimationFrame(draw);
 }

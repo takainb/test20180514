@@ -1,18 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-  <title>Self Camera</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Language" content="en-us">
-  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="//cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
-  <script type="text/javascript" src="key.js"></script>
-  <script type="text/javascript" src="main.js"></script>
+  <meta charset="UTF-8" />
+  <title>Canvas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+  <link rel="stylesheet" href="index.css" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 </head>
 <body>
-   <input type="button"  value="カメラのキャプチャー" onClick="capCamera()">
-   <br>
-   <video id="camera" width="640" height="480" autoplay="1" ></video>
- 
+  <canvas id="canvas"></canvas>
+  <div id="videobox">
+    <video id="video" autoplay playsinline></video>
+  </div>
+  <script src="main.js"></script>
 </body>
 </html>
