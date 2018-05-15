@@ -1,12 +1,12 @@
 const video = document.getElementById("video");
 const dispCs = document.getElementById("disp");
 dispCs.width = 200;
-dispCs.height = 200;
+dispCs.height = 360;
 const dispCtx = dispCs.getContext('2d');
 
 const hiddenCanvas = document.createElement('canvas');
 hiddenCanvas.width = 200;
-hiddenCanvas.height = 200;
+hiddenCanvas.height = 360;
 const hiddenCtx = hiddenCanvas.getContext('2d');
 
 function start() {
@@ -73,7 +73,7 @@ function myDraw() {
         dispCtx.strokeRect(comp[i].x, comp[i].y, comp[i].width, comp[i].height);
         //ctx2.drawImage(img,comp[i].x, comp[i].y, comp[i].width, comp[i].height,0,0,160,120);
     }
-    //requestAnimationFrame(myDraw);
+    requestAnimationFrame(myDraw);
     //setTimeout(myDraw, 500);
     //setImmediate(myDraw);
 }
